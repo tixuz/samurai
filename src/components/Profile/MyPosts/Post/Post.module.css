@@ -4,4 +4,11 @@
 
 .item {
   color: darkslateblue;
+
+}
+
+.item img{
+  /*max-width: 20px ;*/
+  max-height: 50px;
+  border-radius: 30px;
 }

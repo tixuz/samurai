@@ -31,3 +31,9 @@
   grid-area: c;
   background-color: lightcyan;
 }
+
+.app-wrapper-content{
+  color: #000038;
+  grid-area: c;
+  background-color: lightcyan;
+}

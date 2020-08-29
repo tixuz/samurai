@@ -12,6 +12,8 @@
   /*padding: 10px;*/
 }
 
+
+
 .header{
   grid-area: h;
   background-color: antiquewhite;
@@ -22,6 +24,7 @@
 .header img{
   width: 30px;
 }
+
 .nav{
   grid-area: n;
   background-color: darkseagreen;

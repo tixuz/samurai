@@ -8,6 +8,15 @@
   color: whitesmoke;
 }
 
-.item.active{
-  color: gold;
+.item a.activeLink{
+  color: greenyellow;
+}
+
+a, a:visited, a:hover {
+  color: inherit;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
 }

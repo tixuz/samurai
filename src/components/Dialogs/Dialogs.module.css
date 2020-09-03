@@ -1,8 +1,16 @@
-.content{
-  grid-area: c;
-  background-color: lightcyan;
+.dialog{
+display: grid;
+grid-template-columns: 2fr 20fr;
 }
 
-.item {
-  color: darkslateblue;
+.dialogItems {
+  padding: 10px;
+}
+
+.dialogItems .active {
+  color: darkorange;
+}
+
+.dialogItems  {
+  font-weight: bold;
 }

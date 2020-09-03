@@ -6,8 +6,8 @@ import Message from "./Message/Message";
 
 const Messages = () => {
     return (
-                <div>
-                    <h3>Dialogs</h3>
+                <div className={s.content}>
+                    <h3>Messages</h3>
                     <div>
                         <textarea placeholder="Write it!"></textarea>
                         <button>Submit</button>

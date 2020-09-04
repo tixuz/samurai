@@ -4,7 +4,14 @@
 
 .item {
   color: darkslateblue;
-
+  background-color: #ebedf0;
+  border-radius: 18px;
+  line-height: 16px;
+  margin-top: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 6px 12px 7px 12px;
+  margin: 6px 12px 7px 12px;
 }
 
 .item img{

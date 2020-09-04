@@ -1,0 +1,10 @@
+.dialogItem a.activeLink {
+    color: greenyellow;
+}
+
+.dialogItem  {
+  font-weight: bold;
+    display: block;
+    padding: 10px;
+
+}

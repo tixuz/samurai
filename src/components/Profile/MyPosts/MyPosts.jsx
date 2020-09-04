@@ -6,24 +6,17 @@ import Card from "reactstrap/es/Card";
 import CardHeader from "reactstrap/es/CardHeader";
 import CardBody from "reactstrap/es/CardBody";
 
-let posts = [
-    {id: 1,
-    img: "https://themes.2the.me/Messenger-1.1/assets/images/avatars/6.jpg",
-    message: "This is a post",
-    likesCount: 5},
-    {id: 2,
-    img: "https://themes.2the.me/Messenger-1.1/assets/images/avatars/3.jpg",
-    message: "It's a second post",
-    likesCount: 6},
+const MyPosts = (props) => {
+    let myprops = props.props;
 
-]
-let postsElemens = posts.map((p, id) =>{
-    return(
-    <Post key = {id} img={p.id} message={p.message}
-    likesCount={p.likesCount}/>
-    )})
+    let posts = myprops.posts;
 
-const MyPosts = () => {
+    let postsElemens = posts.map((p, id) =>{
+        return(
+            <Post key = {id} img={p.id} message={p.message}
+                  likesCount={p.likesCount}/>
+        )})
+
     return (
         <div>
             <Card className={s.newPost}>

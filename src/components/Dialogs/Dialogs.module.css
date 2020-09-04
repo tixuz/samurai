@@ -7,9 +7,10 @@ grid-template-columns: 2fr 20fr;
   padding: 10px;
 }
 
-.dialogItems .active {
-  color: darkorange;
+.dialogItems a.activeLink {
+    color: greenyellow;
 }
+
 
 .dialogItems  {
   font-weight: bold;

@@ -1,3 +1,8 @@
-.content{
+.newPost{
+  padding: 10px;
+}
+
+.postsBlock{
   background-color: lightgoldenrodyellow;
+  padding: 10px;
 }

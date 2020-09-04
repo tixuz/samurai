@@ -1,0 +1,9 @@
+.descriptionInfo {
+  padding: 10px;
+}
+
+.descriptionInfo img{
+  /*max-width: 20px ;*/
+  max-height: 50px;
+  border-radius: 30px;
+}

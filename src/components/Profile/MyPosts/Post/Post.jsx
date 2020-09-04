@@ -1,15 +1,23 @@
 import React from 'react';
-import s from "./Post.module.css"
-
+import s from "./Post.module.css";
+import {Badge, Button, Card, CardText, CardBody, CardFooter} from "reactstrap";
 
 const Post = (props) => {
     return (
-                        <div className={s.item}>
-                         <img alt="" src='https://bonskies25.files.wordpress.com/2009/08/avatar.jpg' />
-                            {props.message}
-                            <div><span>{props.likesCount} likes</span></div>
-                        </div>
-
+        <Card>
+            <CardBody className='dark'>
+                <CardText>
+                    <blockquote className="blockquote mb-0">
+                        <p>                    {props.message}
+                        </p>
+                        <footer className="blockquote-footer"><Button outline className="float-right">
+                            Likes <Badge color="secondary">{props.likesCount}</Badge>
+                        </Button>
+                        </footer>
+                    </blockquote>
+                </CardText>
+            </CardBody>
+        </Card>
     );
 };
 

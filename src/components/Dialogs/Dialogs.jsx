@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem"
 
 const Dialogs = (props) => {
-    let dialogData = props.props.dialogData;
+    let dialogData = props.state.dialogData;
     let dialogElements = dialogData.map((dialog, id) => {
         return (<DialogItem
             key={id}
@@ -18,7 +18,7 @@ const Dialogs = (props) => {
             <div className={s.dialogItems}>
                 {dialogElements}
             </div>
-            <Messages props={props.props}/>
+            <Messages state={props.state}/>
 
         </div>
 

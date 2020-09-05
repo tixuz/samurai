@@ -5,7 +5,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
 const Profile = (props) => {
-    let myprops = props.props;
+    let myprops = props.state;
     return (
             <div>
                 <ProfileInfo img='' name = 'Hindol'/>

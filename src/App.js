@@ -15,8 +15,8 @@ const App = (props) => {
             <Navbar/>
             <div className='app-wrapper-content'>
                 <Switch>
-                    <Route path='/dialogs' render = {() => <Dialogs props = {props} />} />
-                    <Route path='/profile' render = {() => <Profile props = {props} />} />
+                    <Route path='/profile' render = {() => <Profile state = {props.state.profilePage} />} />
+                    <Route path='/dialogs' render = {() => <Dialogs state = {props.state.dialogsPage} />} />
                     <Redirect to="/profile"/>
                 </Switch>
             </div>

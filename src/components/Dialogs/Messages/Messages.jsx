@@ -5,7 +5,7 @@ import Message from "./Message/Message";
 
 
 const Messages = (props) => {
-    let messagesData = props.props.messagesData;
+    let messagesData = props.state.messagesData;
 
     let messageElements = messagesData.map((message, id) => {
         return (<Message

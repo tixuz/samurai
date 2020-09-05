@@ -1,11 +1,9 @@
 
 let posts = [
     {id: 1,
-        img: "https://themes.2the.me/Messenger-1.1/assets/images/avatars/6.jpg",
         message: "This is a post",
         likesCount: 5},
     {id: 2,
-        img: "https://themes.2the.me/Messenger-1.1/assets/images/avatars/3.jpg",
         message: "It's a second post",
         likesCount: 6},
 
@@ -36,6 +34,19 @@ let state= {
         dialogData: dialogData,
         messagesData: messagesData
     }
+}
+
+export let addPost = (postMessage) => {
+    alert(postMessage);
+    let countPosts = state.profilePage.posts.length;
+    let newPost = {
+        id: countPosts + 1,
+        message: postMessage,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    alert(state.profilePage.posts);
+    debugger;
 }
 
 export default state

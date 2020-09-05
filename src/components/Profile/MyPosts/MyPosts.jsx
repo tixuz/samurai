@@ -7,15 +7,26 @@ import CardHeader from "reactstrap/es/CardHeader";
 import CardBody from "reactstrap/es/CardBody";
 
 const MyPosts = (props) => {
-    let myprops = props.props;
+    let myprops = props.state;
 
     let posts = myprops.posts;
 
     let postsElemens = posts.map((p, id) =>{
         return(
-            <Post key = {id} img={p.id} message={p.message}
+            <Post key = {id} message={p.message}
                   likesCount={p.likesCount}/>
-        )})
+        )});
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+
+        let text = newPostElement.current.value;
+        alert(text);
+        debugger;
+        props.addPost(text);
+    }
+
 
     return (
         <div>
@@ -24,9 +35,9 @@ const MyPosts = (props) => {
                 </CardHeader>
                 <CardBody>
                     <div>
-                        <textarea className='col-12' placeholder="Write it!"></textarea>
+                        <textarea  ref={newPostElement} className='col-12' placeholder="Write it!"></textarea>
                     </div>
-                    <button>Submit</button>
+                    <button onClick={addPost}>Submit</button>
                     <button>Clear</button>
                 </CardBody>
             </Card>

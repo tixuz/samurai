@@ -10,8 +10,8 @@ const MyPosts = (props) => {
     let myprops = props.state;
 
     let posts = myprops.posts;
-
-    let postsElemens = posts.map((p, id) =>{
+    // alert(JSON.stringify(posts));
+    let postsElements = posts.map((p, id) =>{
         return(
             <Post key = {id} message={p.message}
                   likesCount={p.likesCount}/>
@@ -22,8 +22,8 @@ const MyPosts = (props) => {
     let addPost = () => {
 
         let text = newPostElement.current.value;
-        alert(text);
-        debugger;
+        // alert(text);
+        // debugger;
         props.addPost(text);
     }
 
@@ -45,7 +45,7 @@ const MyPosts = (props) => {
                 <CardHeader><h3>My Posts</h3>
                 </CardHeader>
                 <CardBody>
-                    {postsElemens}
+                    {postsElements}
                 </CardBody>
             </Card>
         </div>

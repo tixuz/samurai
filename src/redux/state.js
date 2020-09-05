@@ -1,3 +1,4 @@
+import {renderEntireTree} from "./render";
 
 let posts = [
     {id: 1,
@@ -34,19 +35,22 @@ let state= {
         dialogData: dialogData,
         messagesData: messagesData
     }
-}
+};
 
 export let addPost = (postMessage) => {
-    alert(postMessage);
+    // alert(postMessage);
+    // check sent text
     let countPosts = state.profilePage.posts.length;
     let newPost = {
         id: countPosts + 1,
         message: postMessage,
-        likesCount: 0
+        likesCount: countPosts + 1
     };
     state.profilePage.posts.push(newPost);
-    alert(state.profilePage.posts);
-    debugger;
-}
+    // alert(JSON.stringify(state.profilePage.posts));
+    // check state
+    renderEntireTree(state);
+    // debugger;
+};
 
 export default state
